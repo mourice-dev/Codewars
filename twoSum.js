@@ -8,9 +8,22 @@
 
 // twoSum([1, 2, 3], 4) // returns [0, 2] or [2, 0]
 // twoSum([3, 2, 4], 6) // returns [1, 2] or [2, 1]
-
-
 function twoSum(numbers, target) {
-    return [0, 1];
+  const seen = {}; // store number: index
+
+  for (let i = 0; i < numbers.length; i++) {
+    const current = numbers[i];
+    const needed = target - current;
+    //return needed
+    
+    // // if the needed number already exists, return the two indexes
+    if (seen.hasOwnProperty(needed)) {
+      return [seen[needed], i];
+    }
+
+    // otherwise store current number with its index
+  seen[current] = i;
+  }
+  //return current 
 }
-console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] or [2, 0])
+console.log(twoSum([1, 2, 3], 4)) // [0,2]
