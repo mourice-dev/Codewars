@@ -11,7 +11,7 @@
 // "605"  --> 605
 // "1405" --> 1405
 // "-7" --> -7
-const stringToNumber = function (str) {
+const stringToNumber = (str) => {
   return parseInt(str, 10);
 };
-console.log(stringToNumber("123"));
+console.log(stringToNumber("1234"));
