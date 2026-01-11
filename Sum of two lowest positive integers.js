@@ -5,6 +5,10 @@
 // For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
 
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
 function sumTwoSmallestNumbers(numbers) {
-  // Code here
+  const arr = numbers.sort((a, b) => a - b);
+  const sum = arr.splice(0, 2);
+  return sum.reduce((a, b) => a + b);
 }
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
