@@ -19,16 +19,9 @@
 // Arrays are written in "general" notation. See "Your Test Cases" for examples in your language.
 // In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
 // Beware: In some languages r must be without duplicates.
+
 function inArray(array1, array2) {
-  let r = [];
-  array1.filter((char) => {
-    array2.filter((c) => {
-      if (char.includes(c)) {
-        r.push(char);
-      }
-    });
-  });
-  return r;
+  return array1.filter((char) => array2.some((c) => c.includes(char))).sort();
 }
 console.log(
   inArray(
